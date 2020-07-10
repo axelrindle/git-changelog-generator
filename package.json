@@ -4,7 +4,7 @@
   "description": "Custom changelog generator for git.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "nyc ava",
+    "test": "nyc --reporter=lcov --reporter=text-summary ava",
     "lint": "eslint lib/"
   },
   "bin": {
