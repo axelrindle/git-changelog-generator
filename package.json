@@ -4,7 +4,7 @@
   "description": "Custom changelog generator for git.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0",
+    "test": "nyc ava",
     "lint": "eslint lib/"
   },
   "bin": {
@@ -33,6 +33,9 @@
     "tinydate": "^1.3.0"
   },
   "devDependencies": {
-    "eslint": "^7.4.0"
+    "ava": "^3.10.1",
+    "eslint": "^7.4.0",
+    "nyc": "^15.1.0",
+    "test-console": "^1.1.0"
   }
 }
