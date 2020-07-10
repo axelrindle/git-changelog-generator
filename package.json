@@ -4,7 +4,8 @@
   "description": "Custom changelog generator for git.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "lint": "eslint lib/"
   },
   "bin": {
     "git-changelog-generator": "./lib/index.js"
@@ -30,5 +31,8 @@
     "commander": "^5.1.0",
     "log-symbols": "^4.0.0",
     "tinydate": "^1.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.4.0"
   }
 }
