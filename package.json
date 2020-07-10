@@ -1,0 +1,34 @@
+{
+  "name": "git-changelog-generator",
+  "version": "1.0.0",
+  "description": "Custom changelog generator for git.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "git-changelog-generator": "./lib/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axelrindle/git-changelog-generator.git"
+  },
+  "keywords": [
+    "changelog-generator",
+    "changelog",
+    "git"
+  ],
+  "author": "Axel Rindle <mail@axelrindle.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axelrindle/git-changelog-generator/issues"
+  },
+  "homepage": "https://github.com/axelrindle/git-changelog-generator#readme",
+  "dependencies": {
+    "@axelrindle/async-for-each": "^1.0.1",
+    "chalk": "^4.1.0",
+    "commander": "^5.1.0",
+    "log-symbols": "^4.0.0",
+    "tinydate": "^1.3.0"
+  }
+}
