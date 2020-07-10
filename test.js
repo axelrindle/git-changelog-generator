@@ -6,6 +6,9 @@ const { stdout, stderr } = require("test-console");
 const util = require('./lib/util');
 const logSymbols = require('log-symbols');
 
+const tmp = require('tmp');
+const isGitRepo = require('./lib/is-git-repository');
+
 test('logging info is correctly formatted', t => {
     const info = stdout.inspectSync(function() {
         util.logger.info('foo');
@@ -40,3 +43,22 @@ test('util#splitLines removes any newlines and empty lines', t => {
     const splitted = util.splitLines(myText);
     t.deepEqual(splitted, [ 'foo', 'bar' ])
 });
+
+test.cb('isGitRepository fails in a non-git environment', t => {
+    t.plan(1);
+    
+    const originalCwd = process.cwd();
+    tmp.dir((err, path, cleanupCallback) => {
+        if (err) throw err;
+        
+        process.chdir(path);
+        t.false(isGitRepo());
+        process.chdir(originalCwd);
+        
+        cleanupCallback();
+
+        t.end();
+    });
+});
+
+test('isGitRepository succeeds in a git environment', t => t.true(isGitRepo()));
