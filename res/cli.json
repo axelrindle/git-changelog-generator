@@ -3,6 +3,7 @@
         "paths": "limit the commit history to the given paths (comma separated)",
         "no-title": "disables the insertion of a h1 title at the start of the markdown document",
         "no-commit-amount": "disables the inclusion of commit amounts per tag",
+        "with-master": "optionally includes the given branch (defaults to master) as the newest revision. the selected branch should contain newer commits than the latest tag",
         "date-format": "specifies the date format used in the markdown document. See https://github.com/lukeed/tinydate#patterns for a list of available patterns.",
         "output": "specifies the output file which the markdown will be written to"
     }
