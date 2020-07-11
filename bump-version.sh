@@ -12,7 +12,7 @@
 # # #
 
 VERSION=$(cat package.json | jq -r .version)
-echo " >  Temporarily createing new tag ($VERSION) ..."
+echo " >  Temporarily creating new tag ($VERSION) ..."
 git tag $VERSION
 
 echo " >  Updating CHANGELOG.md ..."
