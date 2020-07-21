@@ -6,6 +6,8 @@
         "with-master": "optionally includes the given branch (defaults to master) as the newest revision. the selected branch should contain newer commits than the latest tag",
         "with-empty-tags": "includes tags, even if they do not contain any matching or new commits",
         "date-format": "specifies the date format used in the markdown document. See https://github.com/lukeed/tinydate#patterns for a list of available patterns.",
+        "remote": "enables the generation of hyperlinks to access the commits & tags on the remote side",
+        "repo": "specifies which repository to link to",
         "limit": "limits the changelog history to a maximum amount of entries",
         "output": "specifies the output file which the markdown will be written to"
     }
